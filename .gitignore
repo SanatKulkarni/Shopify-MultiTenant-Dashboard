@@ -1,0 +1,155 @@
+# ---- General Node / Monorepo ----
+node_modules/
+**/node_modules/
+
+# Package manager caches
+.npm
+.yarn
+.pnpm-store
+
+# Logs & diagnostics
+logs/
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage / instrumentation
+coverage/
+**/coverage/
+.nyc_output/
+
+# Build outputs (frontend & backend)
+dist/
+**/dist/
+dist-ssr/
+build/
+**/build/
+.out/
+.temp/
+.tmp/
+
+# Vite / bundler caches
+.cache/
+.vite/
+# Turborepo / general build caches
+.turbo/
+
+# Parcel / Next / misc (harmless if unused)
+.parcel-cache/
+.next/
+
+# TypeScript incremental build info (if added later)
+*.tsbuildinfo
+
+# Env files (keep local, do not commit secrets)
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Lockfiles (OPTIONAL: comment out if you commit all)
+# Uncomment below ONLY if you intentionally do NOT want lockfiles tracked.
+# yarn.lock
+# package-lock.json
+# pnpm-lock.yaml
+
+# Debug & profiler
+*.log.*
+profile-* 
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ESLint / style caches
+.eslintcache
+.stylelintcache
+
+# PM2 / process managers
+pids/
+.pm2/
+
+# Uploads / generated assets (adjust if you want to commit some)
+uploads/
+**/uploads/
+
+# Temporary data
+*.tmp
+*.temp
+~$*
+
+# Local certificates / keys (never commit real secrets)
+*.pem
+*.key
+*.crt
+
+# Git merge / rebase artifacts
+*.orig
+
+# Mac metadata
+.AppleDouble
+.LSOverride
+
+# Optional tooling
+.vercel/
+.firebase/
+serverless/.serverless/
+serverless/out/
+
+# Yarn 2+ / PnP
+.pnp.*
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/patches/
+
+# Docker artifacts (if added later)
+.docker/
+**/.docker/
+
+# Ignore backups
+*.bak
+*.old
+
+# --- Project Specific Notes ---
+# Keep an .env.example with ONLY the variable names you expect.
+# Remove frontend/.gitignore redundancy if desired; this root file supersedes it.
+
+# Backend transient / secret-prone folders
+backend/temp/
+backend/config/
+# If config holds only source-controlled non-secret code you can remove this,
+# but excluding now to avoid accidental committing of keys.
+backend/config/*.local.js
+backend/config/*.secrets.*
+
+# Common secret file name patterns
+*.env.backup
+secrets.*
+*.credential.json
+*.serviceAccount.json
+*.key.json
+firebase-adminsdk-*.json
+

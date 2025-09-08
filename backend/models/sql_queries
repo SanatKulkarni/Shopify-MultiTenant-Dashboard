@@ -1,0 +1,5 @@
+CREATE TABLE public.customers ( id BIGSERIAL PRIMARY KEY, shop_domain TEXT NOT NULL, customer_id BIGINT NOT NULL, email TEXT, first_name TEXT, last_name TEXT, phone TEXT, created_at TIMESTAMPTZ DEFAULT NOW(), UNIQUE (shop_domain, customer_id) );
+
+CREATE TABLE public.orders ( id BIGSERIAL PRIMARY KEY, shop_domain TEXT NOT NULL, order_id BIGINT NOT NULL, order_number BIGINT, customer_id BIGINT, currency TEXT, total_price NUMERIC(14,2), financial_status TEXT, fulfillment_status TEXT, created_at TIMESTAMPTZ, updated_at TIMESTAMPTZ, raw JSONB, UNIQUE (shop_domain, order_id) );
+
+CREATE TABLE public.products ( id BIGSERIAL PRIMARY KEY, shop_domain TEXT NOT NULL, product_id BIGINT NOT NULL, title TEXT, handle TEXT, vendor TEXT, product_type TEXT, status TEXT, tags TEXT[], created_at TIMESTAMPTZ, updated_at TIMESTAMPTZ, variant_count INT, raw JSONB, UNIQUE (shop_domain, product_id) );
