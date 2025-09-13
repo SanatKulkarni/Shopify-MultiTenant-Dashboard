@@ -1,0 +1,27 @@
+Scope of Work
+✅ 1. Shopify Store Setup
+● Create a free Shopify development store.
+● Add dummy products, customers, and orders to it.
+
+✅ 2. Data Ingestion Service
+● Build a service that connects to Shopify APIs (Or other way round where your APIs are
+hit by Shopify) and ingests:
+○ Customers
+○ Orders
+○ Products
+○ (Bonus) Custom events like cart abandoned, checkout started
+
+● Store this data into your database (Use any RDBMS here as we’d ask SQL questions on
+this during interviews)
+● Ensure the service can be configured for multiple tenants (stores), with data isolated
+using a tenant identifier.
+Reference links for Shopify integration documentation
+https://github.com/Shopify/shopify-app-template-remix
+https://shopify.dev/docs/apps/build/cli-for-apps
+
+✅ 3. Insights Dashboard
+● Create a simple UI (backed by email authentication) to visualize ingested data like:
+○ Total customers, orders, and revenue.
+○ Orders by date (with date range filtering).
+○ Top 5 customers by spend.
+● Add different metrics and their trend charts to reflect business performance - go creative!

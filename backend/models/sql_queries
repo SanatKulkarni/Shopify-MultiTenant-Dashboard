@@ -3,3 +3,30 @@ CREATE TABLE public.customers ( id BIGSERIAL PRIMARY KEY, shop_domain TEXT NOT N
 CREATE TABLE public.orders ( id BIGSERIAL PRIMARY KEY, shop_domain TEXT NOT NULL, order_id BIGINT NOT NULL, order_number BIGINT, customer_id BIGINT, currency TEXT, total_price NUMERIC(14,2), financial_status TEXT, fulfillment_status TEXT, created_at TIMESTAMPTZ, updated_at TIMESTAMPTZ, raw JSONB, UNIQUE (shop_domain, order_id) );
 
 CREATE TABLE public.products ( id BIGSERIAL PRIMARY KEY, shop_domain TEXT NOT NULL, product_id BIGINT NOT NULL, title TEXT, handle TEXT, vendor TEXT, product_type TEXT, status TEXT, tags TEXT[], created_at TIMESTAMPTZ, updated_at TIMESTAMPTZ, variant_count INT, raw JSONB, UNIQUE (shop_domain, product_id) );
+
+
+-- Enable RLS on all tables
+ALTER TABLE public.customers ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.orders ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.products ENABLE ROW LEVEL SECURITY;
+
+-- Create policies for tenant isolation
+-- Note: This requires proper authentication context
+CREATE POLICY "Tenant isolation for customers" ON public.customers
+  FOR ALL USING (shop_domain = current_setting('app.current_tenant', true));
+
+CREATE POLICY "Tenant isolation for orders" ON public.orders
+  FOR ALL USING (shop_domain = current_setting('app.current_tenant', true));
+
+CREATE POLICY "Tenant isolation for products" ON public.products
+  FOR ALL USING (shop_domain = current_setting('app.current_tenant', true));
+
+  -- Create policies that allow all operations for service role
+CREATE POLICY "Allow service operations on customers" ON public.customers
+  FOR ALL USING (true) WITH CHECK (true);
+
+CREATE POLICY "Allow service operations on orders" ON public.orders
+  FOR ALL USING (true) WITH CHECK (true);
+
+CREATE POLICY "Allow service operations on products" ON public.products
+  FOR ALL USING (true) WITH CHECK (true);
