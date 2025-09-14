@@ -6,11 +6,11 @@
 [![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)](#)
 [![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=for-the-badge&logo=shopify&logoColor=white)](#)
 
-## 🚀 Overview
+##  Overview
 
 The Shopify Analytics Dashboard is a comprehensive, production-ready application designed to provide valuable business insights for your Shopify store. It features a beautiful, modern interface with real-time data analytics, interactive charts, and a responsive design that works across all devices. This multi-tenant application supports multiple Shopify stores with proper data isolation.
 
-## ✨ Key Features
+##  Key Features
 
 ### Backend
 
@@ -34,14 +34,14 @@ The Shopify Analytics Dashboard is a comprehensive, production-ready application
 *   **Full-Screen Experience:** An engaging, full-screen login page with captivating animations.
 *   **Production Ready:** Built with error handling, loading states, and a responsive design to be deployed to production.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 *   **Frontend:** React
 *   **Backend:** Node.js, Express
 *   **Database:** Supabase
 *   **API:** Shopify GraphQL API
 
-## ⚙️ Getting Started
+##  Getting Started
 
 ### Prerequisites
 
