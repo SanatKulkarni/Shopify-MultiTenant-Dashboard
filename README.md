@@ -1,3 +1,6 @@
+VIDEO DEMO: https://youtu.be/7F43FYhVIDI
+
+
 # Shopify-Analytics-Dashboard
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
