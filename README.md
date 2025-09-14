@@ -1,7 +1,7 @@
 VIDEO DEMO: https://youtu.be/7F43FYhVIDI
+FRONTEND LINK: https://xeno-sanat-kulkarni-assignment.vercel.app/
 
-
-# Shopify-Analytics-Dashboard
+# Sanat Kulkarni - Shopify Dashboard Analytics
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
 [![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](#)
