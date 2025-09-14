@@ -9,7 +9,12 @@ const app = express();
 
 // Enable CORS for frontend
 app.use(cors({
-  origin: 'http://localhost:5173', // Vite dev server
+  origin: [
+    'http://localhost:5173', // Vite dev server
+    'https://xeno-sanatkulkarni-assignment.onrender.com', // Your deployed frontend
+    /\.vercel\.app$/, // Allow Vercel deployments
+    /\.netlify\.app$/ // Allow Netlify deployments
+  ],
   credentials: true
 }));
 
