@@ -139,10 +139,13 @@ serverless/out/
 
 # Backend transient / secret-prone folders
 backend/temp/
-backend/config/
+# Remove this line that excludes the entire config directory:
+# backend/config/
+# Instead, only exclude sensitive files:
+backend/config/*.local.js
+backend/config/*.secrets.*
 # If config holds only source-controlled non-secret code you can remove this,
 # but excluding now to avoid accidental committing of keys.
-backend/config/*.local.js
 backend/config/*.secrets.*
 
 # Common secret file name patterns

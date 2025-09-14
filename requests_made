@@ -3,8 +3,8 @@ curl -X POST 'http://localhost:4000/ingest/shopify/customers?shop=sanskul.myshop
   -H 'X-Shopify-Access-Token: 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'
 
 Orders Ingestion:
-curl -X POST "http://localhost:4000/ingest/shopify/orders?shop=sanskul.myshopify.com&first=10&pages=1" \
-  -H "X-Shopify-Access-Token: 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"
+curl -X POST 'http://localhost:4000/ingest/shopify/orders?shop=sanskul.myshopify.com&limit=100&max_pages=1' \
+  -H 'X-Shopify-Access-Token: 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'
 
 Products Ingestion:
 curl -X POST "http://localhost:4000/ingest/shopify/products?shop=sanskul.myshopify.com&first=10&pages=1" \
